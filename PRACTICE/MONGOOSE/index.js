@@ -34,7 +34,7 @@ const updateInDB = async () => {
 
 const deleteInDB = async () => {
   const Product = mongoose.model("products", productSchema);
-  let data = await Product.deleteMany({ name: "m8" });
+  let data = await Product.deleteMany({ brand: "MOTO" });
   console.log(data);
 };
 deleteInDB()
