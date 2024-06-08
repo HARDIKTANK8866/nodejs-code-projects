@@ -15,15 +15,16 @@ app.get("/", (req, res) => {
 
 app.use(express.json())
 
-// app.post("/", (req, res) => {
-//   const data = { id: 32, name: "hardik", marks: 99, grade: "A", city: "SURAT" };
-//   connectSql.query("INSERT INTO student value",data,
-//     (error, result, fields) => {
-//       if (error) error;
-//       res.send(result);
-//     }
-//   );
-// });
+app.post("/", (req, res) => {
+  const data = { id: 32, name: "hardik", marks: 99, grade: "A", city: "SURAT" };
+  connectSql.query("INSERT INTO student value",data,
+    (error, result, fields) => {
+      if (error) error;
+      res.send(result);
+    }
+  );
+});
+
 app.post("/", async (req, res) => {
     const { id, name, marks, grade, city } = req.body; // Use req.body to get data from the request
   
@@ -44,4 +45,27 @@ app.post("/", async (req, res) => {
     }
   });
 
-app.listen(6000);
+// app.post("/", (req, res) => {
+  //   const data = { id: 32, name: "hardik", marks: 99, grade: "A", city: "SURAT" };
+  
+  //   const query = `
+  //     INSERT INTO student (id, name, marks, grade, city)
+  //     VALUES ($1, $2, $3, $4, $5)
+  //     RETURNING *
+//   `;
+
+//   const values = [data.id, data.name, data.marks, data.grade, data.city];
+
+//   pool.query(query, values, (error, result) => {
+  //     if (error) {
+    //       console.error('Error inserting data:', error.stack);
+    //       res.status(500).send('Error inserting data');
+    //     } else {
+      //       res.status(200).json(result.rows[0]);
+      //     }
+      //   });
+      // });
+
+
+      
+      app.listen(6000);
