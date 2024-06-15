@@ -1,7 +1,7 @@
 {
-  "name": "jwt",
+  "name": "file-upload",
   "version": "1.0.0",
-  "description": "JWT - BASIC",
+  "description": "file upload image",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
