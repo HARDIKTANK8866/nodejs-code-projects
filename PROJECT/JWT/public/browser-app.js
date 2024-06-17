@@ -60,7 +60,7 @@ btnDOM.addEventListener('click', async () => {
   } catch (error) {
     localStorage.removeItem('token')
     
-    resultDOM.innerHTML = <p>${error.response.data.msg}</p>
+    resultDOM.innerHTML = `<p>${error.response.data.msg}</p>`
     resultDOM.innerHTML = `<p>${(error.response && error.response.data && error.response.data.msg) || 'An error occurred'}</p>`;
   }
 })
