@@ -1,6 +1,7 @@
 const { StatusCode } = require("http-status-codes");
 
 const uploadProductImage = async (req, res) => {
+  console.log(req.files);
   res.send("upload product image");
 };
 
